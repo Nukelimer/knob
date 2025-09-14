@@ -8,4 +8,12 @@ body{
 
 
          font-family: 'Inter', sans-serif;
+
+       
+}
+
+
+.my-thin-text {
+  font-family: "sans-serif" ;
+  font-weight: 100; 
 }

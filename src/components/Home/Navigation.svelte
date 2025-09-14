@@ -18,6 +18,12 @@
     clearTimeout(hoverTimeout);
     showSubURL = false;
   }
+
+
+
+
+ 
+  
 </script>
 
 <nav class="absolute top-0 flex w-full items-center justify-between p-6">
@@ -34,7 +40,7 @@
           on:blur={handleLeave}
         >
           <button
-            class="bg text-[12px] font-light text-[#f0ece0] !not-italic 
+            class="bg text-[12px] font-light text-[#f0ece0] font-sans 
                    hover:text-[#cdea19] hover:underline 
                    cursor-pointer transition-all delay-300"
           >
@@ -57,6 +63,18 @@
             </ul>
           {/if}
         </li>
+
+        {:else if url == "keyboard"}
+         <li>
+          <a
+            href={"/"}
+            class="bg text-[12px] font-light text-[#f0ece0] !not-italic 
+                   hover:text-[#cdea19] hover:underline"
+          >
+            {url}
+          </a>
+        </li>
+
       {:else}
         <li>
           <a

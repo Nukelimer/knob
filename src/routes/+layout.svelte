@@ -16,8 +16,7 @@ import '@fontsource/inter/900-italic.css';
 	let { children } = $props();
 
 
-
-
+  import { page } from '$app/stores';
 	
 
 
@@ -29,7 +28,12 @@ import '@fontsource/inter/900-italic.css';
 	<title>Hello</title>
 </svelte:head>
 
+
+<div class=" overflow-hidden ">
 {@render children?.()}
 
+{#if !$page.status || ( $page.status !== 404 && $page.status !== 500)}
 
-<Navigation/>
+  <Navigation/>
+{/if}
+</div>

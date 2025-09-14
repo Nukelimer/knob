@@ -4,7 +4,7 @@
 
 <footer class="bg-black">
 	<div class="bg-[#ff4d00] py-18 rounded-full px-12 ">
-		<h4 class=" text-center text-4xl md:text-7xl pb-6 font-serif  max-w-4xl mx-auto ">No, not that kind of knob. Order now.</h4>
+		<h4 class=" md:text-start text-center text-4xl md:text-7xl pb-6 font-serif md:w-[70%] px-12 md:px-0  md:pl-16  max-w-4xl  md:mx-0 mx-auto ">No, not that kind of knob. Order now.</h4>
 
 		<div class="flex flex-col md:flex-row items-center  md:items-start justify-between px-16 ">
 			<div class="">
@@ -35,7 +35,7 @@
         <div class="">
 
 
-<p class="pb-[30rem] text-white text-center mt-16 font-sans">
+<p class="pb-16 text-white text-center mt-16 font-sans">
   Press Inquiries —
   <a href="mailto:ben@knob.design" class="">
     ben@knob.design
