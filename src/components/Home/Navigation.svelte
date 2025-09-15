@@ -5,6 +5,7 @@
 
 	const urls = ['keyboard', 'keysets', 'numpad', 'lightswitch'];
 	const sub_url = ['k·no·b·sans', 'k·no·b·sidians'];
+  const path = ["keysets", 'keyset/dark']
 	import { page } from '$app/stores';
 	import { twMerge } from 'tailwind-merge';
 	let showSubURL = false;
@@ -22,9 +23,9 @@
 	}
 </script>
 
-<nav class="absolute top-0 flex w-full items-center justify-between p-6">
+<nav class="absolute top-0 flex w-full items-center justify-between p-6 font-sans">
 
-  {#if  $page.url.pathname === '/numpad' }
+  {#if  $page.url.pathname === '/numpad' || $page.url.pathname === '/keysets'  }
 <a href="/">
 
 
@@ -57,7 +58,7 @@
 					<button
 						class={twMerge(`bg cursor-pointer font-sans text-[12px] font-light 
                    text-[#f0ece0] transition-all 
-                   delay-300 hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' ? 'text-[#000]   hover:text-[#000] ' : 'text-[#f0ece0] '}`)}
+                   delay-300 hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keysets'  ? 'text-[#000]   hover:text-[#000] ' : 'text-[#f0ece0] '}`)}
 					>
 						{url} <span class="text-[#ff4d00] uppercase font-medium">NEW</span>
 					</button>
@@ -82,18 +83,18 @@
               <li>
               {#if sub == 'k·no·b·sans' }
                 <a
-                  href={'/' + encodeURIComponent(sub)}
+                  href={path[0]}
                   class={twMerge(`block px-2 py-1 text-[12px] font-light text-[#f0ece0] 
-                         hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
+                         hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keysets'  ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
                 >
                   {sub}
                 </a>
                 {:else}
                 
                  <a
-                  href={'/' + encodeURIComponent(sub)}
+                  href={path[1]}
                   class={twMerge(`flex px-2 py-1 text-[12px] font-light text-[#f0ece0] 
-                         hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
+                         hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keysets'  ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
                 >
                   {sub} <span class="text-[#ff4d00] uppercase pl-1 font-sans font-medium">NEW</span>
                 </a>
@@ -124,7 +125,7 @@
 					<a
 						href={'/'}
 						class={twMerge(`bg text-[12px] font-light text-[#f0ece0] !not-italic 
-                   hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
+                   hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keysets'  ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
 					>
 						{url}
 					</a>
@@ -134,7 +135,7 @@
 					<a
 						href={'/' + url}
 						class={twMerge(`bg text-[12px] font-light text-[#f0ece0] !not-italic 
-                   hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
+                   hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keysets'  ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
 					>
 						{url}
 					</a>
@@ -143,15 +144,15 @@
 		{/each}
 	</ul>
 
-	<form action="" class="hidden gap-4 md:flex">
+	<form action="" class="hidden gap-4 md:flex ">
 		<input
 			type="email"
 			name="email"
-			class="h-10 max-w-48 rounded-4xl not-italic ring-0 outline-0
-             placeholder:text-[13px] placeholder:tracking-wider
-             focus:border-none active:border-none"
+			class="flex max-w-48  rounded-4xl not-italic ring-0 outline-0
+             placeholder:text-[13px] py-1 placeholder:tracking-wider
+             focus:border-none active:border-none border-0"
 			placeholder="your email address"
 		/>
-		<Button btn_text={'Get Updates'} />
+		<Button btn_text={'Get Updates'} styles="" />
 	</form>
 </nav>

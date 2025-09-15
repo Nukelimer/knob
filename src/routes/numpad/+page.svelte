@@ -5,8 +5,10 @@
 </script>
 
 <div class=" ">
-	<RHero route="numpad"
-	  header_short_txt_styles
+	<RHero
+		last_section_styles
+		route="numpad"
+		header_short_txt_styles
 		header_parent_styles="bottom -0"
 		header_styles
 		header="k·no·b·less"
