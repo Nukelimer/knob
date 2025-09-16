@@ -12,7 +12,7 @@
 	</div>
 
 	<Cta
-		route="keysets"
+		route="keyset"
 		header_short_txt_styles="text-center text-sm text-[#45423f] mb-4"
 		header_parent_styles=" text-center max-w-sm "
 		header_styles="italic lg:tex "

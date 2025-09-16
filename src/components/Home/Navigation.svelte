@@ -3,9 +3,9 @@
 	import knob from '$lib/assets/images/Home/logo_.webp';
 	import knob_dark from '$lib/assets/images/Home/logo_dark.webp';
 
-	const urls = ['keyboard', 'keysets', 'numpad', 'lightswitch'];
+	const urls = ['keyboard', 'keyset', 'numpad', 'lightswitch'];
 	const sub_url = ['k·no·b·sans', 'k·no·b·sidians'];
-  const path = ["keysets", 'keyset/dark']
+  const path = ["keyset", 'keyset/dark']
 	import { page } from '$app/stores';
 	import { twMerge } from 'tailwind-merge';
 	let showSubURL = false;
@@ -25,7 +25,7 @@
 
 <nav class="absolute top-0 flex w-full items-center justify-between p-6 font-sans">
 
-  {#if  $page.url.pathname === '/numpad' || $page.url.pathname === '/keysets'  }
+  {#if  $page.url.pathname === '/numpad' || $page.url.pathname === '/keyset'  }
 <a href="/">
 
 
@@ -47,7 +47,7 @@
 
 	<ul class="flex gap-4">
 		{#each urls as url}
-			{#if url === 'keysets'}
+			{#if url === 'keyset'}
 				<li
 					class="relative"
 					on:mouseenter={handleEnter}
@@ -58,7 +58,7 @@
 					<button
 						class={twMerge(`bg cursor-pointer font-sans text-[12px] font-light 
                    text-[#f0ece0] transition-all 
-                   delay-300 hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keysets'  ? 'text-[#000]   hover:text-[#000] ' : 'text-[#f0ece0] '}`)}
+                   delay-300 hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keyset'  ? 'text-[#000]   hover:text-[#000] ' : 'text-[#f0ece0] '}`)}
 					>
 						{url} <span class="text-[#ff4d00] uppercase font-medium">NEW</span>
 					</button>
@@ -85,7 +85,7 @@
                 <a
                   href={path[0]}
                   class={twMerge(`block px-2 py-1 text-[12px] font-light text-[#f0ece0] 
-                         hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keysets'  ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
+                         hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keyset'  ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
                 >
                   {sub}
                 </a>
@@ -94,7 +94,7 @@
                  <a
                   href={path[1]}
                   class={twMerge(`flex px-2 py-1 text-[12px] font-light text-[#f0ece0] 
-                         hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keysets'  ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
+                         hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keyset'  ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
                 >
                   {sub} <span class="text-[#ff4d00] uppercase pl-1 font-sans font-medium">NEW</span>
                 </a>
@@ -125,7 +125,7 @@
 					<a
 						href={'/'}
 						class={twMerge(`bg text-[12px] font-light text-[#f0ece0] !not-italic 
-                   hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keysets'  ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
+                   hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keyset'  ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
 					>
 						{url}
 					</a>
@@ -135,7 +135,7 @@
 					<a
 						href={'/' + url}
 						class={twMerge(`bg text-[12px] font-light text-[#f0ece0] !not-italic 
-                   hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keysets'  ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
+                   hover:text-[#cdea19] hover:underline  ${$page.url.pathname === '/numpad' || $page.url.pathname === '/keyset'  ? 'text-[#000]  hover:text-[#000]  ' : 'text-[#f0ece0] '}`)}
 					>
 						{url}
 					</a>
