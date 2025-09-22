@@ -8,9 +8,9 @@
 
 <div class=" bg-black pt-14 w-full">
 
-<div class="md:w-[80%] lg:max-w-5xl mx-auto lg:flex md:gap-6 ">
+<div class="md:w-[80%] lg:max-w-5xl mx-auto lg:flex md:gap-6 text-sm ">
 
-        <Spec
+        <Spec route
 		header="Materials"
 		data={[
 			{ name: 'Top Enclosure', info: 'CNC Alum / Anodized Silver' },
@@ -24,7 +24,7 @@
 		]}
 	/>
 
-	<Spec
+	<Spec route
 		header="Connectivity and Power"
 		data={[
 			{ name: 'USB-C Connection', info: 'Cable Included' },

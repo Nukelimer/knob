@@ -9,31 +9,34 @@ import '@fontsource/inter/600-italic.css';
 import '@fontsource/inter/700-italic.css';
 import '@fontsource/inter/800-italic.css';
 import '@fontsource/inter/900-italic.css';
-	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
-	import Navigation from '../components/Home/Navigation.svelte';
+	import '../../app.css';
+	import favicon from '$lib/assets/favicon.png';
+	import Navigation from '../../components/Home/Navigation.svelte';
 
 	let { children } = $props();
 
 
   import { page } from '$app/stores';
-	
 
+
+	
 
 	
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>Hello</title>
+	<title>Knob.Design</title>
 </svelte:head>
 
 
 <div class=" overflow-hidden ">
 {@render children?.()}
 
-{#if !$page.status || ( $page.status !== 404 && $page.status !== 500)}
+{#if !$page.status || ( $page.status !== 404 && $page.status !== 500) &&  !$page.url.pathname.includes("/store") }
 
   <Navigation/>
+
+ 
 {/if}
 </div>

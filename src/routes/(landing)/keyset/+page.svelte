@@ -1,8 +1,8 @@
 <script>
 	
-	import Hero from '../../components/Keysets/Hero.svelte';
-	import ImageCards from '../../components/Keysets/ImageCards.svelte';
-	import Button from '../../components/Resuable/Button.svelte';
+	import Hero from '../../../components/Keysets/Hero.svelte';
+	import ImageCards from '../../../components/Keysets/ImageCards.svelte';
+	import Button from '../../../components/Resuable/Button.svelte';
 </script>
 
 <section class="cover min-h-screen bg-[#D7DAD7]">
@@ -14,7 +14,7 @@
 
 	<ImageCards />
 
-	<div class="  mt-10 flex flex-col items-center justify-center bg-[#D9DAD9]">
+	<div class="  mt-2 flex flex-col items-center justify-center bg-[#D9DAD9]">
 		<div class="">
 			<h4 class="p_p mb-2 text-4xl text-[#45423f] md:text-5xl lg:text-7xl">
 				Do the sans-ible thing.
@@ -28,6 +28,6 @@
 		</a>
 
 
-		   <p class="font-sans  mt-24 mb-4 hidden md:block">Copyright © 2025 / <a href="https://worklouder.cc/">Work Louder</a></p>
+		   <p class="font-sans  mt-24 mb-4 block">Copyright © 2025 / <a href="https://worklouder.cc/">Work Louder</a></p>
 	</div>
 </section>

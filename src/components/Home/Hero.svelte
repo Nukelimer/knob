@@ -31,10 +31,15 @@
 					</p>
 				</div>
 				<div class="hidden gap-8 md:flex">
-					<Button
-						btn_text="Order Today for $439 USD"
-						styles="font-sans bg-[#cdea19] text-black font-extralight px-6 text-sm"
-					/>
+					<a href="/store" class=" block  cursor-pointer">
+					
+						<Button
+						
+							btn_text="Order Today for $439 USD"
+							styles="font-sans bg-[#cdea19] text-black font-extralight px-6 text-sm cursor-pointer"
+						/>
+					
+					</a>
 					<p class="font-sans pt-3 text-[12px] ">
 						ANSI Shipping Now // ISO Sept 2025 // <a class="text-[#cdea19]" href="/updates"
 							>Updates</a
@@ -50,10 +55,12 @@
 
 			<div class="md:hidden">
 				<div class="">
-					<Button
+					<a href="/store" class="mt-6 block cursor-pointer">
+						<Button
 						btn_text="Order Today for $439 USD"
-						styles=" font-sans bg-[#cdea19] text-black px-16 text-[13px] mt-6 font-extralight"
+						styles=" font-sans bg-[#cdea19] text-black px-16 text-[13px] font-extralight cursor-pointer"
 					/>
+					</a>
 
 					<p class=" font-sans pt-3 text-center text-[12px]">
 						ANSI Shipping Now // ISO Sept 2025 // <a class="text-[#cdea19]" href="/updates"

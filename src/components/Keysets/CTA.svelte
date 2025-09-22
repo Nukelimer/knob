@@ -13,7 +13,7 @@
 	} = $props();
 </script>
 
-<div class="border-6">
+<div class="">
 	{#if route == 'keyset'}
 		<div class="  mt-10 flex flex-col items-center justify-center bg-[#D9DAD9]">
 			<div class={twMerge(`  font-serif font-extralight ${header_parent_styles}`)}>

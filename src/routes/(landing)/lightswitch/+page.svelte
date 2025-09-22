@@ -1,13 +1,14 @@
 
 
 <script>
-	import RHero from '../../components/Resuable/R_Hero.svelte';
+	import RHero from '../../../components/Resuable/R_Hero.svelte';
 
 	import hero_img from '$lib/assets/images/Lightswitch/hero.webp';
 </script>
 
 <div class=" ">
 	<RHero
+	btn_array
         last_section_styles="bg-[#FDE086]"
         header_short_txt_styles="text-[#FDE086] text-start "
         route="lightswitch"
