@@ -17,7 +17,7 @@
 
 <nav class=" z-10 flex flex-col items-center max-w-[450px] mx-auto fixed top-5 w-full">
   <div
-    class={` ${open ? "py-4 isolate mx-auto flex w-full max-w-[450px] items-center justify-between min-h-[56px] rounded-t-4xl bg-white px-2 ": "py-2 isolate mx-auto flex w-full max-w-[450px] items-center justify-between min-h-[56px] rounded-4xl bg-white/40 px-2  shadow-lg"} `}
+    class={` ${open ? "py-4 isolate mx-auto flex w-full max-w-[450px] items-center justify-between min-h-[56px] rounded-t-4xl bg-white px-2 ": "py-2 isolate mx-auto flex w-full max-w-[450px] items-center justify-between min-h-[56px] rounded-4xl bg-white/50 backdrop-blur-2xl px-2 "} `}
   >
    
     <a href="/store" aria-label="Store Logo" class="w-36 pl-3">

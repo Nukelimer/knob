@@ -193,7 +193,15 @@
 @font-face {
   font-family: 'p_p';
   src: url('/fonts/PP.woff2') format('woff2');
-  font-weight: 400; /* Regular */
+  font-weight: 400; 
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'marquee_font';
+  src: url('/fonts/marquee.woff2') format('woff2');
+  font-weight: 400; 
   font-style: normal;
   font-display: swap;
 }
@@ -204,6 +212,10 @@
 
 .p_p {
   font-family: "p_p", sans-serif;
+}
+
+.marquee_font {
+  font-family: "marquee_font", monospace;
 }
 
 

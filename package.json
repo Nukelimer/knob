@@ -54,8 +54,13 @@
 		]
 	},
 	"dependencies": {
+		"@selemondev/svelte-marquee": "^0.0.4",
+		"embla-carousel": "^8.6.0",
+		"embla-carousel-svelte": "^8.6.0",
 		"gsap": "^3.13.0",
 		"lucide-svelte": "^0.544.0",
+		"svelte-fast-marquee": "^1.0.2",
+		"svelte-light-carousel": "^2.0.1",
 		"tailwind-merge": "^3.3.1"
 	}
 }
