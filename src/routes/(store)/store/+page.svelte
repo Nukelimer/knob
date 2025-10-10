@@ -1,6 +1,9 @@
 <script>
 	import StoreHero from '../../../components/store/StoreHero.svelte';
 	import CustomMarquee from '../../../components/store/CustomMarquee.svelte';
+	import creator_sm from '$lib/assets/images/Store/creator_sm.webp';
+	import creator_md from '$lib/assets/images/Store/creator_md.webp';
+	import creator_lg from '$lib/assets/images/Store/creator_lg.webp';
 	import showoff from '$lib/assets/images/Store/showoff.webp';
 	import knob from '$lib/assets/images/Store/knob.webp';
 	import rainbow from '$lib/assets/images/Store/rainbow.webp';
@@ -23,29 +26,99 @@
 			]}
 		/>
 	</div>
-	<div class="max-w-[470px]">
-		<img src={showoff} alt="showoff" class="h-fit border" />
+md:max-h-[500px] max-w-[470px] md:flex md:w-full md:min-w-full md:flex-row md:justify-center md:px-4 lg:h-full  max-h-[500px]
+	<div
+		class=" md:flex max-w-[470px] md:w-full md:max-w-full md:px-4  justify-center items-center md:max-h-[600px] overflow-clip"
+	>
+	<img
+		src={creator_lg}
+		alt="creator"
+		class="l  object-cover rounded-t-3xl md:rounded-t-none md:rounded-l-3xl max-h-[280px] md:max-h-full w-full md:w-1/2 md:h-fit  self-stretch justify-self-stretch items-stretch"
+	/>
+		
+
+		<div class=" flex flex-col md:w-1/2  md:overflow-clip">
+			<CustomCard
+				btn_text="keyboard"
+				cta_btn_text={'Explore'}
+				price={'$144'}
+				heading={'Creator Micro 2'}
+				btn_styles={'bg-black text-white px-4 py-1 mb-4'}
+				cta_text="The Creator Micro is everything you asked for. Wireless, playfully tactile, and just as capable as you."
+				cta_url="/fix-me"
+				cta_btn_styles=" border border-black px-6 rounded-full py-1"
+				cta_styles="flex items-center md:my-"
+				cta_text_styles=" w-[80%] text-[.80rem] leading-5"
+				heading_styles="text-3xl pb-2"
+				price_styles="pb-8"
+				container_styles="text-white font-sans  md:flex md:flex-col md:justify-between  md:rounded-b-none md:rounded-r-3xl md:rounded-br-3xl  bg-[#edff00] text-black md:min-w-full md:h-[400px]"
+			/>
+
+			<div class="hidden md:flex  overflow-clip h- full">
+				<img src={creator_md} alt="creator_1" class="w-4/6  scale-150 object-fill " />
+				<img src={creator_sm} alt="creator_1" class="w-2/6 scale-150 object-fill " />
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div
+		class="my-4 max-w-[470px] md:my-2 md:flex md:max-h-[500px] md:w-full md:max-w-full md:flex-row-reverse md:justify-center md:px-4  lg:h-full"
+	>
+		<div
+			class="flex h-full items-center overflow-hidden rounded-t-3xl md:min-h-[280px] md:w-2/3 md:rounded-t-none md:rounded-r-3xl lg:w-full l"
+		>
+			<img
+				src={showoff}
+				alt="showoff"
+				class="max-h -[400px] w-full object-cover md:h-[350px] lg:scale-150 lg:object-contain"
+			/>
+		</div>
 
 		<CustomCard
 			btn_text="collabo"
 			cta_btn_text={'Explore'}
 			price={'$149'}
-			heading={'Creator Micro 2'}
+			heading={'Framer Creator Micro'}
 			btn_styles={'bg-white text-black px-4 py-1 mb-4'}
-			cta_text="The Framer Micro is everything you asked for. Wireless, playfully tactile, and just as capable as you."
+			cta_text="The micro makes it happen, Framer makes it real."
 			cta_url="/fix-me"
 			cta_btn_styles=" border px-6 rounded-full py-1"
-			cta_styles="flex items-center"
+			cta_styles="flex items-center md:my-"
 			cta_text_styles=" w-[80%] text-[.80rem] leading-5"
 			heading_styles="text-3xl pb-2"
 			price_styles="pb-8"
-			container_styles="text-white font-sans"
+			container_styles="text-white font-sans md:w-full  md:flex md:flex-col md:justify-between  md:rounded-b-none md:rounded-l-3xl md:rounded-bl-3xl p-6 "
 		/>
 	</div>
-class="flex items-center md:flex-col md:items-start lg::h-full"
-	<div class="mt-3 max-w-[470px]  md:px-4 md:flex md:flex-row-reverse md:max-w-full md:w-full justify-center items-stretch md:mx-auto">
-		<div class="rounded-t-3xl md:rounded-r-3xl md:rounded-t-none h-full  bg-[#D4D4D4] p -6 md:w-2/3 lg:w-full sm:border-4  flex min-h-full">
-			<img src={knob} alt="knob" class="h-full border-4 border-amber-100" />
+	<!-- container_styles="text-white font-sans md:w-full  md:flex md:flex-col md:justify-between  md:rounded-b-none md:rounded-l-3xl md:rounded-bl-3xl p-6" -->
+
+	<div
+		class="mt-3 max-w-[470px] justify-center md:mx-auto md:flex md:h-fit md:max-h-[500px] md:w-full md:max-w-full md:flex-row-reverse md:px-4"
+	>
+		<div
+			class="flex h-full items-center rounded-t-3xl bg-[#D4D4D4] md:w-2/3 md:rounded-t-none md:rounded-r-3xl lg:w-full"
+		>
+			<img src={knob} alt="knob" class="h-full max-h-[400px] w-full object-contain md:h-[350px]" />
 		</div>
 
 		<CustomCard
@@ -65,8 +138,10 @@ class="flex items-center md:flex-col md:items-start lg::h-full"
 		/>
 	</div>
 
-	<div class="my-6 w-full md: flex">
-		<h3 class="mb-8 w-56 px-4 font-sans text-3xl font-[600] text-white md:w-1/3 max-w-64">Explore our best seller</h3>
+	<div class="md: my-6 flex w-full">
+		<h3 class="mb-8 w-56 max-w-64 px-4 font-sans text-3xl font-[600] text-white md:w-1/3">
+			Explore our best seller
+		</h3>
 		<Explore />
 	</div>
 
