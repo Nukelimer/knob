@@ -43,9 +43,9 @@
 		/>
 	</div>
 class="flex items-center md:flex-col md:items-start lg::h-full"
-	<div class="mt-3 max-w-[470px]  md:px-4 md:flex md:flex-row-reverse md:max-w-full md:w-ful md:mx-auto ">
-		<div class="rounded-t-3xl md:rounded-r-3xl md:rounded-t-none h-full  bg-[#D4D4D4] p-6 md md:w-2/3 lg:w-full">
-			<img src={knob} alt="knob" />
+	<div class="mt-3 max-w-[470px]  md:px-4 md:flex md:flex-row-reverse md:max-w-full md:w-full justify-center items-stretch md:mx-auto">
+		<div class="rounded-t-3xl md:rounded-r-3xl md:rounded-t-none h-full  bg-[#D4D4D4] p -6 md:w-2/3 lg:w-full sm:border-4  flex min-h-full">
+			<img src={knob} alt="knob" class="h-full border-4 border-amber-100" />
 		</div>
 
 		<CustomCard
