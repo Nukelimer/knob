@@ -5,6 +5,7 @@
 	let { children } = $props();
 
 import favicon from '$lib/assets/store.png';
+	import Footer from '../../../components/store/Footer.svelte';
 
 
 
@@ -33,4 +34,7 @@ import favicon from '$lib/assets/store.png';
 
 	<Header/>
 		{@render children?.()}
+
+
+	<Footer/>
 </div>

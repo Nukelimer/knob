@@ -5,7 +5,7 @@
 	
 </script>
 <div
-		class="m-h-screen relative mx-auto mt-3 flex h-screen w-full max-w-[470px] flex-col items-center justify-center overflow-clip rounded-4xl bg-white"
+		class="m-h-screen relative mx-auto mt-3 flex h-screen w-full max-w-[470px] flex-col items-center justify-center overflow-clip rounded-4xl bg-white font-sans"
 	>
 		<img
 			src={store_hero}

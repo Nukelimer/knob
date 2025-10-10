@@ -5,7 +5,7 @@
 	let { btn_text, btn_styles, heading, price, cta_text, cta_btn_text="explore", heading_styles, cta_url,price_styles, cta_styles, cta_text_styles, cta_btn_styles, container_styles } = $props();
 </script>
 
-<div class={twMerge(`max-w-[470px] rounded-b-3xl bg-[#000DFF] p-4 ${ container_styles}`)}>
+<div class={twMerge(`max-w-[470px] rounded-b-3xl bg-[#000DFF] p-4 !lg:justify-between  ${ container_styles}`)}>
 	<div class="">
 		<Button {btn_text} styles={btn_styles} />
 		<h3 class={ heading_styles}>{heading}</h3>
