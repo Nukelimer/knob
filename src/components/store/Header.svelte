@@ -5,6 +5,7 @@
   import * as NavigationMenu from '../../lib/components/ui/navigation-menu/index';
    import * as Accordion from "../../lib/components/ui/accordion/index";
 	import { twMerge } from 'tailwind-merge';
+	import LGNavBar from './LG_NavBar.svelte';
 
   let open = false;
   let cartCount = 0;
@@ -13,9 +14,12 @@
     event.preventDefault();
     open = !open;
   }
+
+
+
 </script>
 
-<nav class=" z-10 flex flex-col items-center max-w-[450px] mx-auto fixed top-5 w-full">
+<nav class=" z-10 flex flex-col items-center max-w-[450px] mx-auto fixed top-5 w-full lg:hidden">
   <div
     class={` ${open ? "py-4 isolate mx-auto flex w-full max-w-[450px] items-center justify-between min-h-[56px] rounded-t-4xl bg-white px-2 ": "py-2 isolate mx-auto flex w-full max-w-[450px] items-center justify-between min-h-[56px] rounded-4xl bg-white/50 backdrop-blur-2xl px-2 "} `}
   >
@@ -115,4 +119,90 @@
 
   {/if}
 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="hidden lg:flex fixed top-5  z-10 w-[80%] items-center">
+<div class=" w-16 h-4">
+
+  <a href="/store" class=""  aria-label="Store Logo">
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 55 16"><path d="M 19.977 7.999 L 27.916 0.126 L 35.855 7.999 L 27.916 15.873 Z M 15.88 5.967 L 9.988 5.967 L 9.988 0.127 L 5.889 0.127 L 5.889 5.967 L 0 5.967 L 0 10.033 L 5.889 10.033 L 5.889 15.873 L 9.988 15.873 L 9.988 10.033 L 15.88 10.033 Z M 48.767 0.542 C 45.201 0.533 41.982 2.66 40.616 5.926 C 39.25 9.193 40.007 12.955 42.533 15.451 L 55 3.087 C 53.345 1.452 51.103 0.536 48.767 0.542 Z" fill="rgb(255, 255, 255)"></path></svg>
+
+
+  </a>
+</div>
+
+  <nav class=" flex-col items-center max-w -[450px] mx-auto  w-full flex">
+   
+
+    <LGNavBar/>
+  
+   
+
+
+
+
+
+
+  <ul
+    class="absolute top-14 w-[450px] list-none  min-h-[70vh]  overflow-clip hidden bg-white rounded-b-4xl"
+    transition:slide={{ duration: 300 }}
+  >
+    
+  
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  </ul>
+
+
+
+
+
+
+
+
+  </nav>
+
+
+   <div
+      class={`flex cursor-pointer items-center justify-center gap-1 rounded-full bg-[#edff00] px-3 py-2 ${open ? "hidden" : "flex"}`}
+    >
+      <ShoppingCart size={18} />
+      <span
+        class="flex h-6 w-6 items-center justify-center rounded-full bg-black px-1 text-center font-mono text-xs text-white"
+      >
+        {cartCount}
+      </span>
+    </div>
+</div>
 

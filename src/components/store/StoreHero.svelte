@@ -1,6 +1,7 @@
 <script>
 	import Button from "../Resuable/Button.svelte";
 	import store_hero from '$lib/assets/images/Store/store_hero.webp';
+	import star_sign from '$lib/assets/images/Store/star_sign.webp';
 	import { ArrowRight,  } from 'lucide-svelte';
 	
 </script>
@@ -55,7 +56,7 @@
 
 
 <div
-		class="m-h-screen relative mx-auto mt-3  h-screen w-[98%] flex-row-reverse items-center justify-center overflow-clip rounded-4xl bg-gradient-to-b from-white/90
+		class="m-h-screen relative mx-auto mt-3  h-screen w-[98%] flex-row-reverse items-center justify-center overflow -clip rounded-4xl bg-gradient-to-b from-white/90
 		 to-white/50 from-70% via-50% font-sans lg:flex hidden "
 	>
 		<img
@@ -86,10 +87,15 @@
 		</div>
 
 		<div
-			class="to-white/ absolute bottom-0 mx-auto flex ] text-white  px-8 max-w-[200px] rounded-3xl flex-col items-center justify-end gap-4  py-6 bg-black left-0 rounded-br-none"
+			class=" absolute bottom-0 mx-auto flex  text-white   max-w-[300px] rounded-3xl flex-col items-center justify-end gap-4  py-4 bg-black left-0 rounded-br-none rounded-l-none "
 		>
 		
-			<p class="text-sm">*Our tools help you focus in ways you’ve only dreamt of.</p>
+
+		<img src={star_sign} alt="dfdfe" class="size-8 self-end mr-4">
+
+		
+
+			<p class="text- px-8   py-8 ">*Our tools help you focus in ways you’ve only dreamt of.</p>
 		</div>
 	</div>
 

@@ -14,7 +14,7 @@
 	import CustomSecondaryCard from '../../../components/store/CustomSecondaryCard.svelte';
 </script>
 
-<main class="flex h-full w-full flex-col items-center">
+<main class="flex h-full w-full flex-col items-center overflow-clip">
 	<StoreHero />
 	<div class="w-full">
 		<CustomMarquee
@@ -26,18 +26,18 @@
 			]}
 		/>
 	</div>
-md:max-h-[500px] max-w-[470px] md:flex md:w-full md:min-w-full md:flex-row md:justify-center md:px-4 lg:h-full  max-h-[500px]
+	md:max-h-[500px] max-w-[470px] md:flex md:w-full md:min-w-full md:flex-row md:justify-center md:px-4
+	lg:h-full max-h-[500px]
 	<div
-		class=" md:flex max-w-[470px] md:w-full md:max-w-full md:px-4  justify-center items-center md:max-h-[600px] overflow-clip"
+		class=" max-w-[470px] items-center justify-center overflow-clip md:flex md:max-h-[600px] md:w-full md:max-w-full md:px-4"
 	>
-	<img
-		src={creator_lg}
-		alt="creator"
-		class="l  object-cover rounded-t-3xl md:rounded-t-none md:rounded-l-3xl max-h-[280px] md:max-h-full w-full md:w-1/2 md:h-fit  self-stretch justify-self-stretch items-stretch"
-	/>
-		
+		<img
+			src={creator_lg}
+			alt="creator"
+			class="l max-h-[280px] w-full items-stretch self-stretch justify-self-stretch rounded-t-3xl object-cover md:h-fit md:max-h-full md:w-1/2 md:rounded-t-none md:rounded-l-3xl"
+		/>
 
-		<div class=" flex flex-col md:w-1/2  md:overflow-clip">
+		<div class=" flex flex-col md:w-1/2 md:overflow-clip">
 			<CustomCard
 				btn_text="keyboard"
 				cta_btn_text={'Explore'}
@@ -54,38 +54,18 @@ md:max-h-[500px] max-w-[470px] md:flex md:w-full md:min-w-full md:flex-row md:ju
 				container_styles="text-white font-sans  md:flex md:flex-col md:justify-between  md:rounded-b-none md:rounded-r-3xl md:rounded-br-3xl  bg-[#edff00] text-black md:min-w-full md:h-[400px]"
 			/>
 
-			<div class="hidden md:flex  overflow-clip h- full">
-				<img src={creator_md} alt="creator_1" class="w-4/6  scale-150 object-fill " />
-				<img src={creator_sm} alt="creator_1" class="w-2/6 scale-150 object-fill " />
+			<div class="h- full hidden overflow-clip md:flex">
+				<img src={creator_md} alt="creator_1" class="w-4/6 scale-150 object-fill" />
+				<img src={creator_sm} alt="creator_1" class="w-2/6 scale-150 object-fill" />
 			</div>
 		</div>
 	</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<div
-		class="my-4 max-w-[470px] md:my-2 md:flex md:max-h-[500px] md:w-full md:max-w-full md:flex-row-reverse md:justify-center md:px-4  lg:h-full"
+		class="my-4 max-w-[470px] md:my-2 md:flex md:max-h-[500px] md:w-full md:max-w-full md:flex-row-reverse md:justify-center md:px-4 lg:h-full"
 	>
 		<div
-			class="flex h-full items-center overflow-hidden rounded-t-3xl md:min-h-[280px] md:w-2/3 md:rounded-t-none md:rounded-r-3xl lg:w-full l"
+			class="l flex h-full items-center overflow-hidden rounded-t-3xl md:min-h-[280px] md:w-2/3 md:rounded-t-none md:rounded-r-3xl lg:w-full"
 		>
 			<img
 				src={showoff}
