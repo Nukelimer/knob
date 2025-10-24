@@ -3,6 +3,7 @@
 	import { keyboards } from '../../routes/(store)/store/data/products';
 	import { support as Supports } from '../../routes/(store)/store/data/support';
 	import SupportDetail from './SupportDetail.svelte';
+	import { writable } from 'svelte/store';
 
 	type MenuType = 'keyboards' | 'accessories' | 'support' | '';
 
@@ -23,6 +24,27 @@
 	function handleLinkClick() {
 		activeMenu = ''; // close modal when navigating
 	}
+
+ let value = writable('hello world');
+
+ const trimmed = (node, value) => {
+  $effect(() => {
+    value.subscribe(v => {
+      if (node.value.trim() !== v) {
+        node.value = v
+      }
+    })
+    
+    function input(event) {
+      const v = event.currentTarget.value
+      value.set(v.trim())
+    }
+    node.addEventListener('input', input)
+    return () => {
+      node.removeEventListener('input', input)
+    }
+  });
+}
 </script>
 
 <div
@@ -165,3 +187,7 @@
 		{/if}
 	</div>
 </div>
+
+
+
+<input use:trimmed={value} />
