@@ -27,24 +27,6 @@
 
  let value = writable('hello world');
 
- const trimmed = (node, value) => {
-  $effect(() => {
-    value.subscribe(v => {
-      if (node.value.trim() !== v) {
-        node.value = v
-      }
-    })
-    
-    function input(event) {
-      const v = event.currentTarget.value
-      value.set(v.trim())
-    }
-    node.addEventListener('input', input)
-    return () => {
-      node.removeEventListener('input', input)
-    }
-  });
-}
 </script>
 
 <div
@@ -121,7 +103,7 @@
 		aria-expanded={activeMenu === 'accessories'}
 	>
 		Accessories <span
-				class="mt-[2px] transition-transform duration-300 ease-in-out"
+				class="mt-0.5 transition-transform duration-300 ease-in-out"
 				class:rotate-180={activeMenu === 'support'}
 			>
 				<ChevronDown size={18} />
@@ -190,4 +172,4 @@
 
 
 
-<input use:trimmed={value} />
+<!-- <input use:trimmed={value} /> -->
