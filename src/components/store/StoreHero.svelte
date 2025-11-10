@@ -16,12 +16,12 @@
 		<img
 			src={store_hero}
 			alt="hero img"
-			class="pointer-events-none absolute bottom-0 -translate-x-22 -translate-y-6 scale-[170%] rotate-[25deg] object-fill select-none"
+			class="pointer-events-none absolute bottom-0 -translate-x-22 -translate-y-6 scale-[170%] rotate-25 object-fill select-none"
 		/>
 
-		<div class="z-[1] mb-16">
+		<div class="z-1 mb-16">
 			<h1
-				class="flex flex-col bg-gradient-to-tl from-black via-0% to-black/45 bg-clip-text text-center !text-6xl font-medium text-transparent"
+				class="flex flex-col bg-linear-to-tl from-black via-0% to-black/45 bg-clip-text text-center text-6xl! font-medium text-transparent"
 			>
 				Form & <span>Function</span>
 			</h1>

@@ -1,57 +1,57 @@
-export interface supportTypes {
+export interface keyboardProduct {
 	slug: string;
 	name: string;
 	price: number;
-	images: string[];
-	description: string;
+	images?: string[];
+	description?: string;
 }
 
-export const support: supportTypes[] = [
+export const keyboards = [
 	{
-		slug: 'input',
-		name: 'Download Input',
+		slug: 'creator-micro-2',
+		name: ' Creator Micro',
 		price: 99,
-		images: ['/images/micro1.webp', '/images/micro2.webp'],
+		images: ['first.webp', 'second.webp'],
 		description: 'A compact and powerful creator tool for small projects.'
 	},
 	{
-		slug: 'nomad-setup',
-		name: 'Nomad setup',
+		slug: 'framer-creator-micro',
+		name: 'Framer Creator Creator',
 		price: 199,
 		images: ['/images/creator1.webp', '/images/creator2.webp'],
 		description: 'Full-featured version for creators of all sizes.'
 	},
 	{
-		slug: 'knob-setup',
-		name: 'Knob1 setup',
+		slug: 'xyz-work-board-2',
+		name: 'XYZ Work Board 2',
 		price: 299,
 		images: ['/images/micropro1.webp', '/images/micropro2.webp'],
 		description: 'Upgraded Micro edition with Pro-level features.'
 	},
 	{
-		slug: 'setup',
-		name: 'Creator setup',
+		slug: 'nomad-e-2',
+		name: 'Nomad [E]',
 		price: 499,
 		images: ['/images/max1.webp', '/images/max2.webp'],
 		description: 'The ultimate edition with maximum performance.'
 	},
 	{
-		slug: 'wrk-shop',
-		name: 'Wrk.shop',
+		slug: 'knob1',
+		name: 'k.n.o.b.1',
 		price: 499,
 		images: ['/images/max1.webp', '/images/max2.webp'],
 		description: 'The ultimate edition with maximum performance.'
 	},
 	{
-		slug: 'https://worklouder.notion.site/9e0b1e0ea65043ef80af5bcf9c9b9d70?v=https://worklouder.notion.site/updates',
-		name: 'Updates',
+		slug: 'creator-board',
+		name: 'Creator Board',
 		price: 499,
 		images: ['/images/max1.webp', '/images/max2.webp'],
 		description: 'The ultimate edition with maximum performance.'
 	},
 	{
-		slug: 'about-us',
-		name: 'About us',
+		slug: 'creator-board-xl',
+		name: 'Creator Board XL',
 		price: 499,
 		images: ['/images/max1.webp', '/images/max2.webp'],
 		description: 'The ultimate edition with maximum performance.'

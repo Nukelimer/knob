@@ -3,9 +3,10 @@ export interface AccessoryItem {
 	slug: string;
 	name: string;
 	category: string;
+	
 }
 
-export const accessories: AccessoryItem[] = [
+export const accessories = [
 	// 🧩 Keycaps
 	{ slug: 'eye-candy-mx-artisan', name: 'Eye Candy (MX artisan)', category: 'Keycaps' },
 	{ slug: 'knob-sans-mx-keyset', name: 'Knob Sans (MX keyset)', category: 'Keycaps' },

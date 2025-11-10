@@ -1,14 +1,34 @@
 <script lang="ts">
   import { page } from '$app/stores';
-	import { fade } from 'svelte/transition';
-  import type { PageData } from './$types';
+  import { fade } from 'svelte/transition';
 
-  // This store updates automatically when the slug changes
-  $: data = $page.data as PageData;
-
-  // Derive reactive values
+  $: data = $page.data;
   $: product = data.product;
   $: supports = data.supports;
+
+  // Correctly typed glob – this is the key part
+  const imageModules = import.meta.glob('$lib/assets/images/Store/items/creator-micro-2/*.webp', {
+    eager: true,
+    import: 'default'
+  }) as Record<string, string>;
+
+  // Map filename → resolved URL (runs once)
+  const imageMap = Object.fromEntries(
+    Object.entries(imageModules).map(([key, value]) => {
+      const filename = key.split('/').pop()!; // "hero.webp"
+      return [filename, value];
+    })
+  );
+
+  // Super simple lookup
+  function getImage(filename: string): string {
+    const url = imageMap[filename];
+    if (!url) {
+      console.warn(`Image not found: ${filename}`);
+      return '/fallback.webp'; 
+    }
+    return url;
+  }
 </script>
 
 <main class="p-8 text-white" in:fade out:fade>
@@ -18,9 +38,15 @@
       <p class="mb-4 text-lg">{product.description}</p>
       <p class="mb-6 text-xl font-semibold">${product.price}</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {#each product.images as img}
-          <img src={img} alt={product.name} class="rounded-xl shadow-md" />
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {#each product.images as filename}
+          {@const src = getImage(filename)}
+          <img
+            {src}
+            alt={product.name}
+            class="rounded-xl shadow-md w-full object-cover hover:scale-105 transition-transform"
+            loading="lazy"
+          />
         {/each}
       </div>
     </section>
@@ -29,7 +55,7 @@
   {#if supports}
     <section class="mt-12">
       <h2 class="text-2xl font-semibold mb-4">Support Information</h2>
-      <p class="text-lg">{ "Mising"}</p>
+      <p class="text-lg">Missing</p>
     </section>
   {/if}
 

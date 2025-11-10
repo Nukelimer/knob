@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { ChevronDown } from 'lucide-svelte';
-	import { keyboards } from '../../routes/(store)/store/data/products';
-	import { support as Supports } from '../../routes/(store)/store/data/support';
+	import { keyboards } from '$lib/data/products';
+import { support as Supports } from '$lib/data/support';
+
 	import SupportDetail from './SupportDetail.svelte';
 	import { writable } from 'svelte/store';
 
@@ -53,7 +54,7 @@
 		>
 			Keyboards
 			<span
-				class="mt-[2px] transition-transform duration-300 ease-in-out"
+				class="mt-0.5 transition-transform duration-300 ease-in-out"
 				class:rotate-180={activeMenu === 'keyboards'}
 			>
 				<ChevronDown size={18} />
@@ -130,7 +131,7 @@
 		>
 			Support
 			<span
-				class="mt-[2px] transition-transform duration-300 ease-in-out"
+				class="mt-0.5 transition-transform duration-300 ease-in-out"
 				class:rotate-180={activeMenu === 'support'}
 			>
 				<ChevronDown size={18} />

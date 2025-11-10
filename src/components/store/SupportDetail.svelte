@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { accessories as allAccessories, type AccessoryItem } from '../../routes/(store)/store/data/accessories';
+	import { accessories as allAccessories, type AccessoryItem } from '$lib/data/accessories';
 
 	let groupedAccessories: Record<string, AccessoryItem[]> = {};
 
