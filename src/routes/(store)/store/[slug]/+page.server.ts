@@ -12,7 +12,11 @@ export const load = async ({ params }) => {
 	const supports = support.find((x) => x.slug === slug) || accessories.find((x) => x.slug === slug);
 
 	if (!product) throw error(404, `Product "${slug}" not found.`);
-	// if (!supports) throw error(404, `Support info for "${slug}" not found.`);
 
-	return { product, supports };
+	// Returning slug here is key for the frontend to build the static path
+	return {
+		product,
+		supports,
+		slug
+	};
 };
