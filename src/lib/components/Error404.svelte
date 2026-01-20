@@ -1,5 +1,6 @@
 <script>
 	import error from '$lib/assets/images/Error/error.webp';
+	import "../../app.css"
 </script>
 
 <div
@@ -8,15 +9,17 @@
 	<img src={error} alt="Error background" class="absolute top-0 h-full w-full object-cover" />
 
 	<div class="relative z-10 max-w-2xl px-6 py-10 text-center">
+
+		<p class="text-white text-2xl mb-4">Wrong route :)</p>
 		<a href="/store">
 			<button
 				class="
           cursor-pointer
           rounded-lg bg-[#ff4d00]
-          px-8
-          py-4 text-lg
+          px-6
+          py-2 text-sm
           font-medium
-          text-black
+          text-white
           shadow-lg
           transition-all
           duration-200
@@ -25,7 +28,7 @@
           md:text-xl
         "
 			>
-				Not the Knob you are looking for? Go to Store
+			 Go back home
 			</button>
 		</a>
 	</div>

@@ -32,7 +32,7 @@
 	}
 </script>
 
-<nav class="absolute top-0 flex w-full items-center justify-between p-6 font-sans">
+<nav class="absolute top-0 flex w-full items-center justify-between p-6 px-1 sm:px-2 md:px-6 font-sans">
 	{#if $page.url.pathname === '/numpad' || $page.url.pathname === '/keyset'}
 		<a href="/">
 			<img src={knob_dark} alt="logo" class="h-8 w-24" />

@@ -1,15 +1,16 @@
-
 <script lang="ts">
 	import Header from '../../../components/store/Header.svelte';
-        import '../../../app.css';
+	import '../../../app.css';
 	let { children } = $props();
 
-import favicon from '$lib/assets/store.png';
+	import favicon from '$lib/assets/store.png';
 	import Footer from '../../../components/store/Footer.svelte';
 
+	  import { page } from '$app/stores';
 
 
-
+	
+	  
 </script>
 
 <svelte:head>
@@ -17,24 +18,9 @@ import favicon from '$lib/assets/store.png';
 	<title>WORK LOUDER</title>
 </svelte:head>
 
+<div class="relative mx-auto flex h-full min-h-screen w-full flex-col items-center bg-black">
+	<Header />
+	{@render children?.()}
 
-
-
-
-
-
-
-
-
-
-<div class="relative  flex flex-col  items-center mx-auto w-full bg-black h-full  min-h-screen">
-
-
-
-
-	<Header/>
-		{@render children?.()}
-
-
-	<Footer/>
+	<Footer />
 </div>
