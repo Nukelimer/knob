@@ -8,7 +8,7 @@
 			src="video/hero_video.mp4"
 			autoplay
 			muted
-			class="aspect-video min-h-[500px] object-cover md:object-fill lg:min-h-screen"
+			class="aspect-video min-h-[500px] object-cover md:object-fill lg:min-h-screen select-none pointer-events-none"
 			><track kind="captions" /></video
 		>
 

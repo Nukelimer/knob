@@ -9,7 +9,7 @@ import '@fontsource/inter/600-italic.css';
 import '@fontsource/inter/700-italic.css';
 import '@fontsource/inter/800-italic.css';
 import '@fontsource/inter/900-italic.css';
-	import '../../app.css';
+	
 	import favicon from '$lib/assets/favicon.png';
 	import Navigation from '../../components/Home/Navigation.svelte';
 

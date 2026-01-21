@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Header from '../../../components/store/Header.svelte';
-	import '../../../app.css';
+
 	let { children } = $props();
 
 	import favicon from '$lib/assets/store.png';

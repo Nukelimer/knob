@@ -1,6 +1,6 @@
 <script>
 	import error from '$lib/assets/images/Error/error.webp';
-	import "../../app.css"
+	
 </script>
 
 <div
@@ -25,7 +25,7 @@
           duration-200
           hover:bg-[#ff6a33]
           active:scale-95
-          md:text-xl
+          md:text-base
         "
 			>
 			 Go back home
